@@ -24,3 +24,265 @@
 .seo-project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.seo-project-card{background:#fff;border:1px solid #e2edf6;border-radius:16px;padding:27px;box-shadow:0 12px 35px rgba(13,43,70,.045);transition:transform .25s,box-shadow .25s}.seo-project-card:hover{transform:translateY(-5px);box-shadow:0 20px 42px rgba(13,43,70,.1)}.project-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.project-card-top>span{font:700 27px var(--display);color:#b8d7e9}.project-card-top small{font-size:8px;letter-spacing:.12em;color:#0c8bc6;font-weight:800;text-align:right}.seo-project-card h3{font:700 25px var(--display);margin-bottom:10px}.seo-project-card p{font-size:12px;line-height:1.8;color:#62778b;min-height:66px}.tag-row{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.tag-row span{font-size:9px;color:#24617f;background:#eaf5fb;border-radius:20px;padding:7px 10px;font-weight:700}.seo-project-card .text-link{margin-top:6px}.experience-label{font-size:10px;color:#0b88bf;font-weight:800;margin-top:18px;letter-spacing:.04em}.note-panel{display:flex;gap:18px;align-items:flex-start;background:#eaf4fa;border:1px solid #d9eaf4;border-radius:15px;padding:22px;margin-top:25px}.note-panel-icon{font-size:25px;color:#078bc7}.note-panel h3{font:700 16px var(--display);margin-bottom:7px}.note-panel p{font-size:11px;line-height:1.7;color:#61778c;margin:0}.case-study-layout{display:grid;grid-template-columns:.65fr 1.35fr;gap:70px}.case-meta{background:#fff;border:1px solid #e2edf6;border-radius:15px;padding:24px;height:max-content;display:flex;flex-direction:column;gap:12px}.case-meta small{font-size:8px;letter-spacing:.14em;color:#0b8bc4;font-weight:800;margin-top:8px}.case-meta strong{font:600 13px var(--display);color:#1a344d}.case-meta .text-link{margin-top:18px;font-size:11px}.case-block{padding-bottom:25px;margin-bottom:25px;border-bottom:1px solid #dce8f0}.case-block h2{font:700 30px var(--display);margin-bottom:12px}.case-block p,.case-results p{font-size:13px;line-height:1.9;color:#5c7186}.case-results{background:#eaf4fa;border:1px solid #d8e9f3;border-radius:15px;padding:24px}.case-results h3{font:700 20px var(--display);margin-bottom:10px}.case-results p{margin:0}.contact-page-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.contact-page-copy p{font-size:14px;line-height:1.85;color:#61748a;max-width:430px;margin-bottom:25px}.contact-details{display:grid;gap:13px}.contact-detail{display:grid;grid-template-columns:46px 1fr 25px;gap:15px;align-items:center;background:#fff;border:1px solid #e2edf6;border-radius:14px;padding:18px;transition:transform .2s,border-color .2s}.contact-detail:hover{transform:translateX(4px);border-color:#9ddcf5}.detail-icon{height:42px;width:42px;display:grid;place-items:center;background:#eaf5fb;border-radius:11px;color:#078bc7;font-weight:800}.contact-detail span:nth-child(2){display:flex;flex-direction:column;gap:5px}.contact-detail small{font-size:8px;letter-spacing:.14em;color:#0c8bc6;font-weight:800}.contact-detail strong{font-size:12px;color:#203b54}.contact-detail>b{color:#0c8bc6}
 @media(max-width:980px){.about-page-grid{gap:42px}.case-study-layout{gap:35px}.contact-page-grid{gap:40px}}
 @media(max-width:720px){.page-hero{padding:125px 0 70px}.page-hero h1{font-size:46px}.page-hero p{font-size:14px}.focus-grid,.category-grid,.skills-columns,.seo-project-grid,.contact-page-grid,.case-study-layout,.about-page-grid{grid-template-columns:1fr;gap:17px}.focus-card{min-height:0;padding:27px}.category-card{padding:20px}.about-page-grid{gap:35px}.about-page-grid .about-visual{max-width:320px}.skills-panel ul{grid-template-columns:1fr}.education-strip{align-items:flex-start;flex-direction:column}.education-mark{text-align:left}.resume-card{max-width:none}.case-meta{order:2}.case-study-content{order:1}.contact-page-grid{gap:30px}.seo-project-card p{min-height:0}.project-card-top{margin-bottom:17px}}
+
+
+/* =========================================
+   Updated Home Hero — Portrait + Growth UI
+   ========================================= */
+
+.hero-profile-visual {
+  height: 470px;
+  display: block;
+  isolation: isolate;
+}
+
+.growth-dashboard {
+  position: absolute;
+  z-index: 1;
+  width: min(94%, 470px);
+  height: 330px;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  padding: 22px;
+  border: 1px solid rgba(56, 189, 248, .32);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(13, 43, 70, .96), rgba(5, 19, 36, .94));
+  box-shadow: 0 25px 70px rgba(0, 0, 0, .35), 0 0 45px rgba(14, 165, 233, .12);
+  backdrop-filter: blur(12px);
+  animation: dashboardFloat 7s ease-in-out infinite;
+}
+
+.dashboard-header,
+.chart-heading,
+.dashboard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dashboard-header {
+  color: #c4d8e9;
+  font: 700 9px var(--font);
+  letter-spacing: .16em;
+}
+
+.live-indicator {
+  color: #7ce3b0;
+  font-size: 8px;
+  letter-spacing: .1em;
+}
+
+.dashboard-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+  margin-top: 20px;
+}
+
+.metric-card {
+  position: relative;
+  min-height: 68px;
+  padding: 12px 13px;
+  overflow: hidden;
+  border: 1px solid rgba(137, 190, 223, .16);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, .045);
+}
+
+.metric-card small {
+  display: block;
+  margin-bottom: 7px;
+  color: #8eaac2;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.metric-card strong {
+  color: #f4f8fc;
+  font: 600 12px var(--display);
+}
+
+.metric-icon {
+  position: absolute;
+  right: 12px;
+  top: 17px;
+  color: var(--blue);
+  font: 700 21px var(--display);
+}
+
+.seo-metric {
+  animation: cardFloat 5.5s ease-in-out infinite;
+}
+
+.performance-metric {
+  animation: cardFloat 5.5s ease-in-out -2.5s infinite;
+}
+
+.growth-chart {
+  position: relative;
+  height: 145px;
+  margin-top: 17px;
+  padding-top: 2px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(135, 180, 210, .16);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 35px,
+    rgba(145, 188, 215, .09) 36px
+  );
+}
+
+.chart-heading {
+  position: relative;
+  z-index: 2;
+  color: #91abc2;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.chart-heading span:last-child {
+  color: #5d88a8;
+  font-size: 6px;
+}
+
+.growth-chart svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 112px;
+  overflow: visible;
+}
+
+.chart-line {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: drawGrowthLine 3.2s cubic-bezier(.6, 0, .3, 1) .35s forwards,
+             lineGlow 2.5s ease-in-out 3.6s infinite alternate;
+}
+
+.chart-area {
+  opacity: 0;
+  animation: revealChartArea 1.2s ease 2.6s forwards;
+}
+
+.dashboard-footer {
+  margin-top: 13px;
+  color: #7190aa;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.hero-portrait {
+  position: absolute;
+  z-index: 3;
+  right: 5%;
+  bottom: 0;
+  width: min(65%, 330px);
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, .35));
+}
+
+.hero-profile-visual .visual-caption {
+  z-index: 4;
+  bottom: 2px;
+  left: 4%;
+  right: 4%;
+}
+
+@keyframes drawGrowthLine {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes revealChartArea {
+  to { opacity: 1; }
+}
+
+@keyframes lineGlow {
+  from { filter: drop-shadow(0 0 2px rgba(56, 189, 248, .25)); }
+  to { filter: drop-shadow(0 0 7px rgba(56, 189, 248, .8)); }
+}
+
+@keyframes dashboardFloat {
+  0%, 100% { margin-top: 0; }
+  50% { margin-top: -10px; }
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 980px) {
+  .hero-profile-visual { height: 420px; }
+  .growth-dashboard { width: 100%; }
+  .hero-portrait { right: 4%; width: 68%; height: 390px; }
+}
+
+@media (max-width: 720px) {
+  .hero-profile-visual {
+    width: 100%;
+    height: 340px;
+    margin-top: 12px;
+  }
+
+  .growth-dashboard {
+    width: 96%;
+    height: 260px;
+    top: 47%;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .dashboard-metrics { margin-top: 13px; gap: 8px; }
+  .metric-card { min-height: 57px; padding: 9px; }
+  .metric-card small { font-size: 6px; }
+  .metric-card strong { font-size: 10px; }
+  .metric-icon { right: 8px; top: 13px; font-size: 17px; }
+  .growth-chart { height: 108px; margin-top: 12px; }
+  .growth-chart svg { height: 82px; }
+  .dashboard-footer { margin-top: 9px; font-size: 5px; }
+
+  .hero-portrait {
+    right: 7%;
+    width: 67%;
+    height: 315px;
+  }
+
+  .hero-profile-visual .visual-caption {
+    bottom: 0;
+    left: 2%;
+    right: 2%;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .growth-dashboard,
+  .seo-metric,
+  .performance-metric,
+  .chart-line,
+  .chart-area {
+    animation: none !important;
+  }
+
+  .chart-line { stroke-dashoffset: 0; }
+  .chart-area { opacity: 1; }
