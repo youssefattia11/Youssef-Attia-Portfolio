@@ -93,6 +93,25 @@ a { color: inherit; text-decoration: none; }
 
 .brand-mark span { color: #fff; }
 
+/* Combined YA brand mark */
+
+.brand-monogram {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
+  letter-spacing: 0;
+}
+
+.brand-monogram svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -1230,6 +1249,11 @@ h1, h2, h3, p { margin-top: 0; }
 
   .hero-description { font-size: 14px; }
 
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .hero-visual {
     height: 330px;
     margin-top: 5px;
@@ -1952,7 +1976,7 @@ h1, h2, h3, p { margin-top: 0; }
 }
 
 /* =========================================
-   Updated Home Hero — Portrait + Growth UI
+   Updated Home Hero — Growth Dashboard
    ========================================= */
 
 .hero-profile-visual {
@@ -1961,8 +1985,6 @@ h1, h2, h3, p { margin-top: 0; }
   isolation: isolate;
   overflow: visible;
 }
-
-/* Dashboard positioned to the left */
 
 .growth-dashboard {
   position: absolute;
@@ -1979,7 +2001,7 @@ h1, h2, h3, p { margin-top: 0; }
   background: linear-gradient(145deg,rgba(13,43,70,.97),rgba(5,19,36,.97));
   box-shadow: 0 25px 70px rgba(0,0,0,.35),0 0 45px rgba(14,165,233,.12);
   backdrop-filter: blur(12px);
-  animation: dashboardFloat 7s ease-in-out infinite;
+  animation: dashboardFloat 5.5s ease-in-out infinite;
 }
 
 .dashboard-header,
@@ -2043,11 +2065,11 @@ h1, h2, h3, p { margin-top: 0; }
 }
 
 .seo-metric {
-  animation: cardFloat 5.5s ease-in-out infinite;
+  animation: cardFloat 4.5s ease-in-out infinite;
 }
 
 .performance-metric {
-  animation: cardFloat 5.5s ease-in-out -2.5s infinite;
+  animation: cardFloat 4.5s ease-in-out -2.25s infinite;
 }
 
 .growth-chart {
@@ -2092,44 +2114,13 @@ h1, h2, h3, p { margin-top: 0; }
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
   animation:
-    drawGrowthLine 3.2s cubic-bezier(.6,0,.3,1) .35s forwards,
-    lineGlow 2.5s ease-in-out 3.6s infinite alternate;
+    drawGrowthLine 1.6s cubic-bezier(.35,0,.2,1) .15s forwards,
+    lineGlow 3s ease-in-out 1.9s infinite alternate;
 }
 
 .chart-area {
   opacity: 0;
-  animation: revealChartArea 1.2s ease 2.6s forwards;
-}
-
-/* Portrait positioned to the right */
-
-.hero-portrait {
-  position: absolute;
-  z-index: 3;
-  right: -2%;
-  bottom: 0;
-  width: min(48%,255px);
-  height: 405px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  pointer-events: none;
-}
-
-.hero-portrait img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-  filter: drop-shadow(0 12px 28px rgba(0,0,0,.35));
-}
-
-.hero-profile-visual .visual-caption {
-  z-index: 4;
-  bottom: 2px;
-  left: 0;
-  right: 0;
+  animation: revealChartArea .7s ease .9s forwards;
 }
 
 /* Growth Animations */
@@ -2143,18 +2134,25 @@ h1, h2, h3, p { margin-top: 0; }
 }
 
 @keyframes lineGlow {
-  from { filter: drop-shadow(0 0 2px rgba(56,189,248,.25)); }
-  to { filter: drop-shadow(0 0 7px rgba(56,189,248,.8)); }
+  from { filter: drop-shadow(0 0 2px rgba(56,189,248,.2)); }
+  to { filter: drop-shadow(0 0 6px rgba(56,189,248,.65)); }
 }
 
 @keyframes dashboardFloat {
-  0%,100% { margin-top: 0; }
-  50% { margin-top: -9px; }
+  0%,100% { transform: translateY(-50%) rotate(-3deg); }
+  50% { transform: translateY(calc(-50% - 5px)) rotate(-3deg); }
 }
 
 @keyframes cardFloat {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  50% { transform: translateY(-3px); }
+}
+
+.hero-profile-visual .visual-caption {
+  z-index: 4;
+  bottom: 2px;
+  left: 0;
+  right: 0;
 }
 
 /* Tablet Hero */
@@ -2165,12 +2163,6 @@ h1, h2, h3, p { margin-top: 0; }
   .growth-dashboard {
     width: 96%;
     left: -5%;
-  }
-
-  .hero-portrait {
-    right: -1%;
-    width: 48%;
-    height: 375px;
   }
 }
 
@@ -2223,18 +2215,23 @@ h1, h2, h3, p { margin-top: 0; }
     font-size: 5px;
   }
 
-  .hero-portrait {
-    right: 0;
-    width: 43%;
-    height: 290px;
-  }
-
   .hero-profile-visual .visual-caption {
     bottom: 0;
     left: 0;
     right: 0;
     font-size: 8px;
   }
+}
+
+/* About Portrait Animation */
+
+.photo-frame {
+  animation: photoFloat 6s ease-in-out infinite;
+}
+
+@keyframes photoFloat {
+  0%,100% { transform: rotate(-3deg) translateY(0); }
+  50% { transform: rotate(-3deg) translateY(-4px); }
 }
 
 /* Accessibility */
@@ -2244,9 +2241,11 @@ h1, h2, h3, p { margin-top: 0; }
   .seo-metric,
   .performance-metric,
   .chart-line,
-  .chart-area {
+  .chart-area,
+  .photo-frame {
     animation: none !important;
   }
 
   .chart-line { stroke-dashoffset: 0; }
   .chart-area { opacity: 1; }
+  .photo-frame { transform: rotate(-3deg); }
