@@ -14,10 +14,20 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    .photo-frame {
+      width: 100%;
+    }
+
     .photo-frame .photo-placeholder.about-photo {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      aspect-ratio: 4 / 5;
       padding: 0;
       overflow: hidden;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #071629;
     }
 
@@ -25,8 +35,8 @@
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center;
+      object-fit: contain;
+      object-position: center top;
       animation: none;
     }
   </style>
@@ -71,6 +81,7 @@
 
     <section class="page-hero dark-section">
       <div class="container page-hero-inner">
+
         <div class="eyebrow reveal">
           <span class="status-dot"></span> ABOUT ME
         </div>
@@ -83,6 +94,7 @@
         <p class="reveal delay-2">
           A little about my professional journey, the experience I have built, and the direction I am growing toward.
         </p>
+
       </div>
     </section>
 
@@ -90,6 +102,7 @@
       <div class="container about-page-grid">
 
         <div class="about-visual reveal">
+
           <div class="photo-frame">
             <div class="photo-placeholder about-photo">
               <img src="assets/youssef-hero.jpg" alt="Youssef Attia">
@@ -102,9 +115,11 @@
           </div>
 
           <div class="blue-scribble"></div>
+
         </div>
 
         <div class="about-copy reveal">
+
           <div class="section-kicker">
             <span></span> WHO I AM
           </div>
@@ -121,6 +136,7 @@
           <p>
             My work brings together keyword research, on-page and off-page optimization, SEO-friendly content, website improvements, and performance analysis. I also value the role of usability and visual clarity in creating better digital experiences.
           </p>
+
         </div>
 
       </div>
@@ -130,6 +146,7 @@
       <div class="container experience-layout">
 
         <div class="experience-heading reveal">
+
           <div class="section-kicker kicker-light">
             <span></span> WORK EXPERIENCE
           </div>
@@ -144,6 +161,7 @@
           </p>
 
           <div class="resume-card">
+
             <div class="resume-file-icon">PDF</div>
 
             <div class="resume-file-copy">
@@ -156,6 +174,7 @@
             <a class="button button-primary resume-button" href="assets/Youssef-Attia-CV.pdf" download>
               Download My CV <span>↓</span>
             </a>
+
           </div>
         </div>
 
@@ -205,6 +224,7 @@
       <div class="container">
 
         <div class="section-heading reveal">
+
           <div>
             <div class="section-kicker">
               <span></span> SKILLS & DEVELOPMENT
@@ -219,6 +239,7 @@
           <p>
             SEO is the foundation of my professional direction, while paid media and analytics are areas I continue to develop.
           </p>
+
         </div>
 
         <div class="skills-columns">
@@ -252,6 +273,7 @@
         </div>
 
         <div class="education-strip reveal">
+
           <div>
             <div class="section-kicker">
               <span></span> EDUCATION
@@ -264,6 +286,7 @@
           <div class="education-mark">
             ALEXANDRIA<br>UNIVERSITY
           </div>
+
         </div>
 
       </div>
@@ -286,7 +309,9 @@
         <span>Youssef Attia</span>
       </a>
 
-      <span>© <span id="year"></span> Youssef Attia. Built to grow.</span>
+      <span>
+        © <span id="year"></span> Youssef Attia. Built to grow.
+      </span>
 
       <a href="#top" class="back-top">Back to top ↑</a>
 
@@ -294,5 +319,6 @@
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
